@@ -1,282 +1,243 @@
-<<<<<<< HEAD
-# Medicine Analyzer App
+🧬 Medicine Analyzer App
 
-A production-ready Flutter mobile application that helps users understand medicines and health conditions in a clear, structured, and responsible way.
+A production-ready Flutter mobile application designed to help people understand medicines and health conditions in a clear, structured, and responsible way.
 
-## 🎯 Features
+This app focuses on trust, simplicity, and safety, combining modern UI design with AI-powered analysis to make medical information easier to understand — without replacing professional medical advice.
 
-### 🔍 Input Methods
-- **Search by Medicine Name**: Text-based search for specific medicines
-- **Scan Medicine**: Capture medicine images using device camera
-- **Upload Image**: Select medicine photos from gallery
-- **OCR Extraction**: Automatic text recognition from images with manual correction
+✨ Why This App Exists
 
-### 🧠 AI Integration
-- **Groq AI-Powered**: All intelligence provided by Groq API
-- **Structured JSON Responses**: Medical information returned in organized format
-- **Medical Safety**: Neutral, non-prescriptive information
+Understanding medicines shouldn’t feel confusing or risky.
+Medicine Analyzer was built to:
 
-### 💊 Medicine Analysis
-Comprehensive medicine information in glass-style cards:
-- Why to take this medicine
-- When to take it (timing, frequency, before/after food)
-- How to take (form type, instructions)
-- Dosage guidance (adult, pediatric, geriatric)
-- Possible side effects (common & serious)
-- Who should avoid
-- Alternative medicines
-- Food & lifestyle guidance
-- Missed dose guidance
-- Storage instructions
+Explain medicines in plain, structured language
 
-### 🩺 Health Condition Feature
-Dedicated condition analysis:
-- Enter illness or health issue
-- Get dietary recommendations
-- Foods to avoid
-- Helpful habits
-- When to seek professional help
+Reduce misinformation
 
-### 🎨 Beautiful UI/UX
-- **Glassmorphism Design**: Modern glass effect with blur and transparency
-- **Soft Gradients**: Blue, purple, teal color palette
-- **Dark Mode**: Full dark mode support with consistent design
-- **Smooth Animations**: Elegant transitions and loading states
-- **Trust-Focused**: Calm, non-alarming language and visual hierarchy
+Encourage responsible usage
 
-### 📊 User Features
-- **Search History**: Track previous searches
-- **Settings**: Dark mode toggle, app info
-- **Legal**: Medical disclaimer and information
-- **Responsive Design**: Works on all device sizes
+Maintain a calm, medical-grade experience
 
-## 🏗️ Architecture
+⚠️ This app is for educational purposes only and does not replace professional medical advice.
 
-### Clean Architecture Implementation
-```
+🎯 Core Features
+🔍 Multiple Input Methods
+
+Search by medicine name
+
+Scan medicine using camera
+
+Upload medicine images from gallery
+
+OCR extraction with manual correction support
+
+🧠 AI-Powered Intelligence
+
+Powered by Groq AI
+
+Uses carefully designed prompts
+
+Returns structured JSON for reliable UI rendering
+
+Medical information is neutral and non-prescriptive
+
+💊 Medicine Analysis (Categorized & Clear)
+
+Each medicine is broken into easy-to-read sections:
+
+Why the medicine is used
+
+When to take it (timing, before/after food)
+
+How to take it (tablet, syrup, etc.)
+
+General dosage guidance (non-prescriptive)
+
+Possible side effects (common & serious)
+
+Who should avoid it
+
+Alternative medicines
+
+Food & lifestyle guidance
+
+Missed dose instructions
+
+Storage instructions
+
+All information is displayed in glassy, modern cards for clarity.
+
+🩺 Health Condition Guidance
+
+Users can also enter a health condition or illness and receive:
+
+Recommended foods
+
+Foods to avoid
+
+Helpful daily habits
+
+Guidance on when to consult a doctor
+
+🎨 UI & Design Philosophy
+
+Glassmorphism UI with blur & transparency
+
+Soft gradients (blue, teal, purple tones)
+
+Fully supported Dark Mode
+
+Smooth animations & loading states
+
+Calm language and visual hierarchy
+
+Designed to feel trustworthy, modern, and human
+
+🧱 Architecture Overview
+
+The project follows Clean Architecture, making it scalable and maintainable.
+
 lib/
-├── core/              # Business logic
-│   ├── constants/     # App-wide constants
-│   ├── theme/         # Theme & UI design
-│   └── utils/         # Helper utilities
-├── data/              # Data layer
-│   ├── datasources/   # API calls (Groq)
-│   ├── models/        # JSON serializable models
-│   └── repositories/  # Data repository implementations
-├── domain/            # Business logic layer
-│   ├── entities/      # Core business entities
-│   ├── repositories/  # Repository interfaces
-│   └── usecases/      # Business use cases
-└── presentation/      # UI layer
-    ├── pages/         # Full screens
-    ├── providers/     # Riverpod state management
-    └── widgets/       # Reusable components
-```
+├── core/              # App constants, themes, utilities
+├── data/              # API calls, models, repositories
+├── domain/            # Business entities & interfaces
+└── presentation/      # UI, providers, widgets
 
-### State Management
-- **Riverpod**: Modern reactive state management
-- **FutureProvider**: Async operation handling
-- **StateProvider**: Local state management
+State Management
 
-### Technology Stack
-- **Framework**: Flutter (latest stable)
-- **State Management**: Riverpod
-- **API Client**: Dio
-- **JSON**: json_serializable
-- **Camera**: Camera plugin
-- **OCR**: Google ML Kit
-- **Local Storage**: Shared Preferences
-- **Environment**: flutter_dotenv
+Riverpod
 
-## 🚀 Getting Started
+Async handling with FutureProvider
 
-### Prerequisites
-- Flutter SDK (^3.9.2)
-- Dart SDK
-- Groq API Key
+Local state via StateProvider
 
-### Installation
+🛠️ Tech Stack
 
-1. **Clone the repository**
-```bash
-git clone <repository-url>
-cd medine_analyser
-```
+Flutter (3.9.2+)
 
-2. **Install dependencies**
-```bash
+Riverpod (state management)
+
+Dio (networking)
+
+Groq AI (medicine & condition analysis)
+
+Google ML Kit (OCR)
+
+SharedPreferences (local storage)
+
+flutter_dotenv (environment variables)
+
+🚀 Getting Started
+Prerequisites
+
+Flutter SDK (≥ 3.9.2)
+
+Dart SDK
+
+Groq API key
+
+Installation
+
+1️⃣ Clone the repository
+
+git clone https://github.com/akshaypatra00/medicine-analyzer-flutter.git
+cd medicine-analyzer-flutter
+
+
+2️⃣ Install dependencies
+
 flutter pub get
-```
 
-3. **Generate JSON serialization code**
-```bash
+
+3️⃣ Generate JSON files
+
 flutter pub run build_runner build
-```
 
-4. **Setup environment variables**
-Create `.env` file in project root:
-```
+
+4️⃣ Set up environment variables
+Create a .env file in the root directory:
+
 GROQ_API_KEY=your_groq_api_key_here
-```
 
-Get your API key from [Groq Console](https://console.groq.com)
 
-5. **Run the application**
-```bash
+5️⃣ Run the app
+
 flutter run
-```
 
-## 📱 App Structure
+📱 Screens Included
 
-### Screens
+Splash Screen
 
-1. **Splash Screen** - App initialization with branding
-2. **Home Screen** - Main entry point with search options
-3. **Medicine Analysis** - Detailed medicine information
-4. **Condition Analysis** - Health condition guidance
-5. **Search History** - Track previous searches
-6. **Settings** - User preferences and legal info
+Home (Search & Scan)
 
-## 🔐 Safety & Compliance
+Medicine Analysis
 
-### Medical Disclaimer
-The app includes mandatory disclaimers:
-- "This information is for educational purposes only and does not replace medical advice"
-- Encourages professional consultation
-- Uses neutral, non-judgmental language
+Condition Analysis
 
-### Safety Rules
-- ✅ No diagnosis
-- ✅ No prescriptions
-- ✅ No exact dosages
-- ✅ Neutral information only
-- ✅ Professional consultation encouraged
+Search History
 
-## 🎨 Design System
+Settings & Legal Info
 
-### Colors
-- **Primary**: Indigo (#6366F1)
-- **Secondary**: Cyan (#06B6D4)
-- **Accent**: Purple (#8B5CF6)
-- **Success**: Green (#10B981)
-- **Warning**: Amber (#F59E0B)
-- **Error**: Red (#EF4444)
+🔐 Safety & Responsibility
+Medical Safety Rules
 
-### Typography
-- **Display**: 32px - Page titles
-- **Headline**: 24px - Section headers
-- **Title**: 18px - Card titles
-- **Body**: 14-16px - Main content
-- **Label**: 12px - Metadata
+❌ No diagnosis
 
-## 🔄 Groq API Integration
+❌ No prescriptions
 
-### Prompt Engineering
-The app uses carefully crafted prompts to ensure:
-1. Structured JSON responses
-2. Medical neutrality
-3. Safety-focused information
-4. Clear categorization
+❌ No exact dosage recommendations
 
-### Example Requests
-```dart
-// Medicine Analysis
-"Analyze this medicine: Aspirin"
+✅ Neutral, educational information
 
-// Condition Analysis
-"What should I eat if I have this condition: Fever"
-```
+✅ Professional consultation encouraged
 
-## 📝 Environment Setup
+Clear disclaimers are shown throughout the app.
 
-### .env File
-```
-GROQ_API_KEY=gsk_your_key_here
-```
+🧪 Testing & Build
 
-### Platform-Specific Setup
+Run tests:
 
-**Android** (android/app/build.gradle)
-- Min SDK: 21
-- Camera & Gallery permissions
-
-**iOS** (ios/Runner/Info.plist)
-- Camera usage description
-- Photo library usage description
-
-## 🧪 Testing
-
-Run the test suite:
-```bash
 flutter test
-```
+
 
 Build for production:
-```bash
-flutter build apk      # Android
-flutter build ipa      # iOS
-```
 
-## 📚 API Reference
+flutter build apk     # Android
+flutter build ipa     # iOS
 
-### Groq API
-- **Base URL**: https://api.groq.com/openai/v1
-- **Model**: mixtral-8x7b-32768
-- **Rate Limit**: Based on Groq's pricing
+🧠 Groq AI Usage
 
-### Medicine Analysis Response
-```json
-{
-  "name": "medicine name",
-  "whyToTake": {
-    "description": "...",
-    "benefits": ["..."]
-  },
-  "whenToTake": {
-    "timing": "morning/evening/night",
-    "frequency": "once daily",
-    "beforeFood": true,
-    "afterFood": false
-  },
-  ...
-}
-```
+The app uses structured prompts to ensure:
 
-## 🐛 Debugging
+Predictable JSON responses
 
-Enable verbose logging:
-```dart
-AppUtils.log('message'); // Custom logging
-```
+Medical neutrality
 
-Check errors:
-```bash
-flutter analyze
-```
+Clear categorization
 
-## 📞 Support
+Safe explanations
 
-For issues and feature requests:
-1. Check existing issues
-2. Provide detailed reproduction steps
-3. Include Flutter version: `flutter --version`
-4. Include device info
+Example prompts:
 
-## 📄 License
+Analyze this medicine: Paracetamol
+What should I eat if I have this condition: Fever
+
+👨‍💻 Developer
+
+Developed by:
+Akshay Patra
+
+Flutter Developer
+
+Focused on clean architecture & real-world usability
+
+Passionate about building trust-focused, user-safe applications
+
+📄 License
 
 This project is licensed under the MIT License.
 
-## ⚠️ Medical Disclaimer
+⚠️ Final Medical Disclaimer
 
-This application provides educational information about medicines and health conditions. It is **NOT** a substitute for professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare professional before making any health-related decisions.
-
-## 🙏 Acknowledgments
-
-- Built with Flutter
-- Powered by Groq AI
-- Inspired by trust-focused medical design
-- Crafted with care for user safety
-
-=======
-# medicine-analyzer-flutter
->>>>>>> 6e8e274eb26b2987f456318a18b9ad08b3a19e8d
+This application provides educational information only.
+It is not a substitute for professional medical advice, diagnosis, or treatment.
+Always consult a qualified healthcare professional before making health decisions.
