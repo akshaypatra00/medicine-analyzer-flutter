@@ -6,12 +6,4 @@ import 'core/constants/app_strings.dart';
 import 'presentation/pages/splash_page.dart';
 import (key: key);
 
- hemeNotifierProvider);
-
-    return MaterialApp(
-      title: AppStrings.appName,
-      theme: lightTheme(),
-      darkTheme: dar
-    );
-  }
 }
