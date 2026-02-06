@@ -9,15 +9,6 @@ import 'presentation/pages/history_page.dart';
 import 'presentation/pages/settings_page.dart';
 import 'presentation/providers/app_providers.dart';
 
-Future<void> main() async {
-  try {
-    await dotenv.load(fileName: '.env');
-  } catch (e) {
-    debugPrint(
-      'Note: .env file not found, using environment variables if available',
-    );
-  }
-
   runApp(const ProviderScope(child: MedicineAnalyzerApp()));
 }
 
