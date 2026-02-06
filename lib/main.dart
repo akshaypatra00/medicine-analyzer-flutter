@@ -13,15 +13,7 @@ import (key: key);
     return MaterialApp(
       title: AppStrings.appName,
       theme: lightTheme(),
-      darkTheme: darkTheme(),
-      themeMode: isDarkMode ? ThemeMode.dark : ThemeMode.light,
-      debugShowCheckedModeBanner: false,
-      home: const SplashPage(),
-      routes: {
-        '/home': (context) => const HomePage(),
-        '/history': (context) => const HistoryPage(),
-        '/settings': (context) => const SettingsPage(),
-      },
+      darkTheme: dar
     );
   }
 }
