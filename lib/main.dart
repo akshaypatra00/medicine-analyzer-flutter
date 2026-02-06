@@ -6,9 +6,7 @@ import 'core/constants/app_strings.dart';
 import 'presentation/pages/splash_page.dart';
 import (key: key);
 
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final isDarkMode = ref.watch(themeNotifierProvider);
+ hemeNotifierProvider);
 
     return MaterialApp(
       title: AppStrings.appName,
