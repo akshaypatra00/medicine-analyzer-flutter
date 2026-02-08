@@ -1,7 +1,16 @@
 
 
-part of 'condition_analysis_m _$ConditionAnalysisModelFromJ
-  condition: json['condition'] asendedFoods'] as List<dynamic>)
+part of 'condition_analysis_model.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+ConditionAnalysisModel _$ConditionAnalysisModelFromJson(
+  Map<String, dynamic> json,
+) => ConditionAnalysisModel(
+  condition: json['condition'] as String,
+  recommendedFoods: (json['recommendedFoods'] as List<dynamic>)
       .map((e) => e as String)
       .toList(),
   foodsToAvoid: (json['foodsToAvoid'] as List<dynamic>)
