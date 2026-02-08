@@ -2,9 +2,7 @@
 
 part of 'condition_analysis_model.dart'
 
-ConditionAnalysisModel _$ConditionAnalysisModelFromJson(
-  Map<String, dynamic> json,
-) => ConditionAnalysisModel(
+ConditionAnalysisModel _$ConditionAnalysisModelFromJ
   condition: json['condition'] as String,
   recommendedFoods: (json['recommendedFoods'] as List<dynamic>)
       .map((e) => e as String)
