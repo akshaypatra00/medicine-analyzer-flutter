@@ -3,8 +3,7 @@
 part of 'condition_analysis_model.dart'
 
 ConditionAnalysisModel _$ConditionAnalysisModelFromJ
-  condition: json['condition'] as String,
-  recommendedFoods: (json['recommendedFoods'] as List<dynamic>)
+  condition: json['condition'] asendedFoods'] as List<dynamic>)
       .map((e) => e as String)
       .toList(),
   foodsToAvoid: (json['foodsToAvoid'] as List<dynamic>)
