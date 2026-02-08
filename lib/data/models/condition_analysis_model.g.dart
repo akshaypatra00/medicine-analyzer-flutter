@@ -1,8 +1,6 @@
 
 
-part of 'condition_analysis_model.dart'
-
-ConditionAnalysisModel _$ConditionAnalysisModelFromJ
+part of 'condition_analysis_m _$ConditionAnalysisModelFromJ
   condition: json['condition'] asendedFoods'] as List<dynamic>)
       .map((e) => e as String)
       .toList(),
