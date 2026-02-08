@@ -4,7 +4,7 @@ part of 'condition_analysis_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
-// ***************************************
+// *************************
 
 ConditionAnalysisModel _$ConditionAnalysisModelFromJson(
   Map<String, dynamic> json,
